@@ -243,4 +243,18 @@ img.image {
     div#nature, div#wildlife {
         height: 100vh;
     }
+
+    div#nature div.hover-text, div#wildlife div.hover-text {
+        top: calc(100% + 20px);
+        left: 50%; /* Start just outside the right edge of the container */
+        transform: translate(-50%, 0);
+        transition: top 0.5s ease; 
+    }
+
+    div#nature:hover div.hover-text, 
+    div#wildlife:hover div.hover-text {
+        top: 35%;
+        transition:
+    }
+    
 }
