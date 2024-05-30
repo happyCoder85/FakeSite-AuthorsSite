@@ -12,11 +12,58 @@
     <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <title>David Lee</title>
     <link rel="stylesheet" href="styles.css">
-    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <sidebar>
-        <img id="logo" src="assets/DavidLeeLogo.svg" alt="David Lee Photography Logo" >
-    </sidebar>    
+    <div id="container">
+        <div id="mini-bar" >
+            <button class="hamburger">
+                <i class="menuIcon material-icons">menu</i>
+                <i class="closeIcon material-icons">close</i>
+            </button>
+        </div>
+        <div id="sidebar" class="menu">
+            <div id="toggle-menu">
+                <button class="hamburger">
+                    <i class="menuIcon material-icons">menu</i>
+                    <i class="closeIcon material-icons">close</i>
+                </button>
+            </div>
+            <a href="index.html"><img id="logo" src="assets/DavidLeeLogo.svg" alt="David Lee Photography Logo" ></a>
+            <nav id="sidebar-nav">
+                <ul id="sidebar-links">
+                    <li><a class="menuItem" href="#">About</a></li>
+                    <li><a class="menuItem" href="nature.html">Nature</a></li>
+                    <li><a class="menuItem" href="wildlife.html">Wildlife</a></li>
+                    <li><a class="menuItem" href="#">Blog</a></li>
+                </ul>
+            </nav>
+            <footer>
+                <aside>
+                    <ul id="socials">
+                        <li><a href="https://facebook.com" target="_blank"><img src="./assets//social-icons/facebook.png" alt="Facebook Logo"></a></li>
+                        <li><a href="https://instagram.com" target="_blank"><img src="./assets//social-icons/instagram.png" alt="Instagram Logo"></a></li>
+                        <li><a href="https://twitter.com" target="_blank"><img src="./assets//social-icons/twitter.png" alt="Twitter Logo"></a></li>
+                    </ul>
+                </aside>
+                <p>&copy; 2024 - <a href="https://jonspurling.ca">Jonathan Spurling</a></p>
+            </footer>
+        </div>    
+        <div id="main">
+            <div id="nature">
+                <a href="nature.html">
+                    <img src="./assets/nature/nature_main_photo.jpeg" alt="Nature photo">
+                    <div class="hover-text">Nature Photos</div>
+                </a>
+            </div>
+            <div id="wildlife">
+                <a href="wildlife.html">
+                    <img src="./assets/wildlife/wildlife_main_photo.jpeg" alt="Wildlife photograph">
+                    <div class="hover-text">Wildlife Photos</div>
+                </a>
+            </div>
+        </div>
+    </div> 
 </body>
 </html>

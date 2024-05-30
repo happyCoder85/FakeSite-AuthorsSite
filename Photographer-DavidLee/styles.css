@@ -5,9 +5,242 @@
 }
 
 body {
-    background-color: black;
+    background-color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+ul {
+    list-style: none;
+}
+
+/* Logo in sidebar */
 img#logo {
     width: 100px;
+}
+
+/* Main container */
+div#container {
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+}
+
+/* Bar with hamburger menu for small screens */
+div#mini-bar {
+    width: 50px;
+    height: 100vh;
+    background-color: #F2CD5D;
+}
+
+/* Sidebar  - Small screens*/
+
+div#sidebar {
+    width: 100%;
+    background-color: #F2CD5D;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Logo */
+div#sidebar img {
+    display: block;
+    margin: 20px auto;
+}
+
+/* Nav Links */
+nav#sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+ul#sidebar-links {
+    width: 100%;
+    padding-top: 50px;
+}
+
+ul#sidebar-links li {
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+ul#sidebar-links li a {
+    margin: auto;
+    text-decoration: none;
+    color: #000;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+ul#sidebar-links li a:hover,
+ul#sidebar-links li a.active {
+    transform: scale(1.3);
+}
+
+/* Social Links */
+div#sidebar footer aside ul#socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+div#sidebar footer aside ul#socials li a img {
+    margin: 0 0 10px 0;
+}
+
+div#sidebar footer aside ul#socials li a img:hover {
+    box-shadow: 0px 0px 3px 1px #000;
+    border-radius: 5px;
+}
+
+/* Toggle menu settings */
+div#toggle-menu {
+    display: none;
+}
+
+.hamburger {
+    position: fixed;
+    z-index: 100;
+    top: 5px;
+    left: 5px;
+    padding: 4px;
+    border: none;
+    background: #F2CD5D;
+    cursor: pointer;
+}
+
+div#container div#mini-bar button.hamburger i.closeIcon {
+    display: none;
+}
+
+.menu {
+    position: fixed;
+    transform: translateX(-100%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: black;
+    color: white;
+    list-style: none;
+    padding-top: 4rem;
+}
+
+.showMenu {
+    transform: translateX(0);
+}
+
+/* Main content area */
+div#main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+}
+
+div#nature, div#wildlife {
+    height: 50vh;
+    position: relative;
+    overflow: hidden; /* Ensure the image doesn't overflow */
+}
+
+div#nature {
+    background-color: #000;
+}
+
+div#wildlife {
+    background-color: grey;
+}
+
+div#main div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .75;
+    transform: scale(1.1); /* Start slightly zoomed in */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition for the zoom effect */
+}
+
+div#nature:hover img, div#wildlife:hover img {
+    transform: scale(1); /* Zoom out to the natural size */
+    opacity: 1;
+
+}
+
+div#nature div.hover-text, div#wildlife div.hover-text {
+    color: #fff;
+    position: absolute;
+    top: 35%;
+    left: calc(100% + 20px); /* Start just outside the right edge of the container */
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    text-align: center;
+    z-index: 10;
+    opacity: 0; /* Start invisible */
+    transition: left 0.5s ease, opacity 0.5s ease; /* Transition for left and opacity */
+}
+
+div#nature:hover div.hover-text, div#wildlife:hover div.hover-text {
+    left: 50%; /* Move to the center of the container */
+    opacity: 1; /* Make visible */
+}
+
+footer p {
+    font-size: .7rem;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+footer p a {
+    color: #000;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+div#wildlife-gallery,
+div#nature-gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+img.image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    background-size: cover;
+    display: block;
+}
+
+@media only screen and (min-width: 750px) {
+    div#mini-bar {
+        display: none;
+    }
+
+    .menu {
+        position: unset;
+        height: 100vh;
+        max-width: 200px;
+        transform: none;
+    }
+
+    /* Main content area */
+    div#main {
+        flex-direction: row;
+    }
+
+    div#nature, div#wildlife {
+        height: 100vh;
+    }
 }
