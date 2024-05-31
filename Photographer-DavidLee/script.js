@@ -27,24 +27,27 @@ menuItems.forEach(
   )
 
 // Wildlife Photos
-const gallery = document.querySelector("#wildlife-gallery");
+const gallery = document.querySelector(".grid-container");
 const startNumber = 1;
-const numberOfImages = 20;
+const numberOfImages = 23;
 
 for (let i = startNumber; i <= numberOfImages; i++) {
-  const newImageDiv = document.createElement('div');  
+  const newGridItem = document.createElement("div");
+  newGridItem.classList.add("grid-item");
+
   const newImage = document.createElement('img');
-  newImageDiv.className = "image";
+  newImage.classList.add("gallery-image");
+
 
   const path = "./assets/wildlife/no_attribute/wildlife" + i + ".jpg";
   newImage.src = path;
   newImage.alt = "Image found on Vecteezy to use for this demo site";
 
-  newImageDiv.appendChild(newImage);
+  newGridItem.appendChild(newImage);
 
-  gallery.appendChild(newImageDiv);
+  gallery.appendChild(newGridItem);
 }
-
+ 
 
 
 
