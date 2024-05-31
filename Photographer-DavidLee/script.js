@@ -30,20 +30,24 @@ menuItems.forEach(
 const gallery = document.querySelector(".grid-container");
 const startNumber = 1;
 const numberOfImages = 23;
+let path = "";
 
 for (let i = startNumber; i <= numberOfImages; i++) {
   const newGridItem = document.createElement("div");
   newGridItem.classList.add("grid-item");
 
+  if (gallery.id == "wildlife-gallery") {
+    path = "./assets/wildlife/no_attribute/wildlife" + i + ".jpg";
+  }
+  if (gallery.id == "nature-gallery") {
+    path = "./assets/nature/no_attribute/nature" + i + ".jpg";
+  }
+
   const anchor = document.createElement("a");
-  const anchor_path = "./assets/wildlife/no_attribute/wildlife" + i + ".jpg";
   /* anchor.href = anchor_path; */
 
   const newImage = document.createElement('img');
   newImage.classList.add("gallery-image");
-
-
-  const path = "./assets/wildlife/no_attribute/wildlife" + i + ".jpg";
   newImage.src = path;
   newImage.alt = "Image found on Vecteezy to use for this demo site";
 

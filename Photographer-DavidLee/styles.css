@@ -209,7 +209,7 @@ footer p a:hover {
     text-underline-offset: 5px;
 }
 
-div#wildlife-gallery {
+div#gallery {
     flex-direction: column;
     width: 100%;
 }
@@ -381,7 +381,7 @@ div.grid-item img:hover {
         opacity: 1; /* Make visible */
     }
 
-    div#wildlife-gallery {
+    div#gallery {
         display: flex;
         justify-content: flex-end;
         padding-left: 200px; /* Push content to the right by sidebar's width */
@@ -393,11 +393,19 @@ div.grid-item img:hover {
         grid-template-columns: repeat(2, 1fr);
         max-width: 100%; /* Ensure grid container fits the remaining space */
     }
-    div.grid-item:nth-child(3n+1),
+    div#wildlife-gallery div.grid-item:nth-child(3n+1),
     div.grid-item:last-child {
         grid-column: span 2;
     }
-    div.grid-item:nth-child(3n+1):nth-child(4n) {
+    div#wildlife-gallery div.grid-item:nth-child(3n+1):nth-child(4n) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    div#nature-gallery div.grid-item:nth-child(3n),
+    div.grid-item:last-child {
+        grid-column: span 2;
+    }
+    div#nature-gallery div.grid-item:nth-child(3n):nth-child(2n) {
         grid-column: span 1;
         grid-row: span 1;
     }
@@ -408,13 +416,31 @@ div.grid-item img:hover {
         grid-template-columns: repeat(4, 1fr);
     }
 
-    div.grid-item:nth-child(3n+1), 
+    div#wildlife-gallery div.grid-item:nth-child(3n+1), 
     div.grid-item:last-child {
         grid-row: span 1;
         grid-column: span 1;
     }
-    div.grid-item:nth-child(8n+1) {
+    div#nature-gallery div.grid-item:nth-child(3n),
+    div.grid-item:last-child {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    div#wildlife-gallery div.grid-item:nth-child(8n+1) {
         grid-row: span 2;
         grid-column: span 2;
+    }
+    div#nature-gallery div.grid-item:nth-child(3n+1), 
+    div.grid-item:last-child {
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+    div#nature-gallery div.grid-item:nth-child(2n) {
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+    div#nature-gallery div.grid-item:nth-last-child(2) {
+        grid-row: span 1;
+        grid-column: span 1;
     }
 }
