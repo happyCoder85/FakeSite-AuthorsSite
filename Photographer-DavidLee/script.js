@@ -29,8 +29,16 @@ menuItems.forEach(
 // Wildlife Photos
 const gallery = document.querySelector(".grid-container");
 const startNumber = 1;
-const numberOfImages = 23;
+let numberOfImages = 0;
 let path = "";
+
+if (gallery.id == "wildlife-gallery") {
+  numberOfImages = 24;
+}
+if (gallery.id == "nature-gallery") {
+  numberOfImages = 23;
+}
+
 
 for (let i = startNumber; i <= numberOfImages; i++) {
   const newGridItem = document.createElement("div");

@@ -394,18 +394,19 @@ div.grid-item img:hover {
         max-width: 100%; /* Ensure grid container fits the remaining space */
     }
     div#wildlife-gallery div.grid-item:nth-child(3n+1),
-    div.grid-item:last-child {
+    div#nature-gallery div.grid-item:last-child {
         grid-column: span 2;
     }
     div#wildlife-gallery div.grid-item:nth-child(3n+1):nth-child(4n) {
         grid-column: span 1;
         grid-row: span 1;
     }
-    div#nature-gallery div.grid-item:nth-child(3n),
-    div.grid-item:last-child {
+    div#nature-gallery div.grid-item:nth-child(3n) {
         grid-column: span 2;
     }
-    div#nature-gallery div.grid-item:nth-child(3n):nth-child(2n) {
+    
+    div#nature-gallery div.grid-item:nth-child(3n):nth-child(2n),
+    div#wildlife-gallery div.grid-item:last-child {
         grid-column: span 1;
         grid-row: span 1;
     }
@@ -421,12 +422,17 @@ div.grid-item img:hover {
         grid-row: span 1;
         grid-column: span 1;
     }
+
+    div#wildlife-gallery div.grid-item:last-child() {
+        grid-column: span 4;
+        grid-row: span
+    }
     div#nature-gallery div.grid-item:nth-child(3n),
     div.grid-item:last-child {
         grid-column: span 1;
         grid-row: span 1;
     }
-    div#wildlife-gallery div.grid-item:nth-child(8n+1) {
+    div#wildlife-gallery div.grid-item:nth-child(5n+1) {
         grid-row: span 2;
         grid-column: span 2;
     }
