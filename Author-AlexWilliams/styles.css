@@ -96,7 +96,7 @@ main section p {
     margin: 0 auto;
 }
 
-main section a.button {
+main aside a.button {
     margin: 20px auto 0;
     width: 150px;
     font-size: 1.5rem;
@@ -114,7 +114,7 @@ main section a.button {
     box-shadow: 0px 0px 3px #333;
 }
 
-main section a.button:hover {
+main aside a.button:hover {
     transform: scale(0.9);   
 }
 main#writing {
@@ -235,19 +235,19 @@ main img#alex {
     display: block;
     margin: 0 auto 5px;    
 }
-main section#contact {
+main aside#contact {
     margin: 20px auto;
 }
 
-main section#contact a {
+main aside#contact a {
     padding: 20px;
 }
 
-main section#contact a img {
+main aside#contact a img {
     transition: transform 0.3s ease;
 }
 
-main section#contact a img:hover {
+main aside#contact a img:hover {
     transform: scale(0.7);
 }
 
@@ -316,19 +316,19 @@ main section#contact a img:hover {
         font-family: Helvetica, Verdana, Tahoma, sans-serif;
     }
     
-    main section#contact {
+    main aside#contact {
         margin: 20px auto;
     }
     
-    main section#contact a {
+    main aside#contact a {
         padding: 20px;
     }
     
-    main section#contact a img {
+    main aside#contact a img {
         transition: transform 0.3s ease;
     }
     
-    main section#contact a img:hover {
+    main aside#contact a img:hover {
         transform: scale(0.7);
     }
     
