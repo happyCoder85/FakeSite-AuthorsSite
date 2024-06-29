@@ -1,4 +1,4 @@
-# Fake Sites
+# Fake Sites Personas
 
 Fake Sites is a project designed to practice and enhance my skills in creating personas and tailoring business solutions to meet their specific requirements. The project involves creating fictional characters with complete stories and developing websites to showcase their unique needs and offerings.
 
